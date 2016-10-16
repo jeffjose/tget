@@ -11,6 +11,9 @@
   "dependencies": {
       "optimist": "^0.6.1",
       "rc": "^0.4.0",
-      "clivas": "^0.2.0"
+      "clivas": "^0.2.0",
+      "numeral": "^1.5.3",
+      "progress": "^1.1.8",
+      "colors": "^1.1.2"
   }
 }
