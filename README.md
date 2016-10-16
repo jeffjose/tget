@@ -1,4 +1,4 @@
-# peerflix
+# tget
 
 tget is wget for torrents.
 
