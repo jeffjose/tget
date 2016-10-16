@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+var optimist = require('optimist')
+var rc       = require('rc')
+var clivas   = require('clivas')
+
+var torrentStream = require('torrent-stream');
+
+var argv = rc('tget', {}, optimist
+  .usage('Usage: $0 magnet-link-or-torrent')
+  .argv)
+
+
+var totalLength = null;
+var downLength = null;
+
+var engine = torrentStream(argv._[0], {
+    'connections': 100,
+    'path': '.'
+});
+
+engine.on('torrent', function() {
+  console.log('yay');
+});
+
+engine.on('ready', function(){
+  engine.files.forEach(function(file){
+    //console.log(file.name, file.length/1024/1024);
+    file.select();
+  });
+
+  totalLength = engine.files.reduce(function (prevLength, currFile) {return prevLength + currFile.length}, 0);
+  clivas.clear()
+});
+
+
+engine.on('download', function(){
+  clivas.clear()
+  clivas.line((engine.swarm.downloaded * 100/totalLength).toPrecision(2) + "%", (engine.swarm.downloaded/1024/1024).toPrecision(2) + "MB", (engine.swarm.downloadSpeed()/1024/1024).toPrecision(2) + 'MB/s', engine.swarm.wires.length + " peers");
+});
+
+
+engine.on('idle', function(){
+  clivas.write('Done!');
+  engine.destroy();
+});
