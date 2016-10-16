@@ -1,5 +1,5 @@
 {
-  "name": "tget",
+  "name": "t-get",
   "version": "1.0.0",
   "description": "tget is wget for torrents",
   "main": "app.js",

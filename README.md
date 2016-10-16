@@ -3,7 +3,7 @@
 tget is wget for torrents.
 
 ```
-npm install -g tget
+npm install -g t-get
 ```
 
 ## Usage
