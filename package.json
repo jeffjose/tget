@@ -1,6 +1,6 @@
 {
   "name": "t-get",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tget is wget for torrents",
   "main": "app.js",
   "scripts": {
@@ -14,11 +14,11 @@
   "homepage": "https://github.com/jeffjose/tget#readme",
   "license": "MIT",
   "dependencies": {
-      "optimist": "^0.6.1",
-      "rc": "^0.4.0",
-      "clivas": "^0.2.0",
-      "numeral": "^1.5.3",
-      "progress": "^1.1.8",
-      "colors": "^1.1.2"
+    "optimist": "^0.6.1",
+    "rc": "^0.4.0",
+    "clivas": "^0.2.0",
+    "numeral": "^1.5.3",
+    "progress": "^1.1.8",
+    "colors": "^1.1.2"
   }
 }
