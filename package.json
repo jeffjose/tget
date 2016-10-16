@@ -2,11 +2,16 @@
   "name": "tget",
   "version": "1.0.0",
   "description": "tget is wget for torrents",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffjose/tget.git"
+  },
+  "author": "Jeffrey Jose <jeffjosejeff@gmail.com>",
+  "homepage": "https://github.com/jeffjose/tget#readme",
   "license": "ISC",
   "dependencies": {
       "optimist": "^0.6.1",
