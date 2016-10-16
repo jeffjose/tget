@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.8.2
+3 info using node@v5.4.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/jeffjose/scripts/tget',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/jeffjose/.npm/tget/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /home/jeffjose/.npm correctMkdir not in flight; initializing
+10 info lifecycle tget@1.0.0~prepublish: tget@1.0.0
+11 silly lifecycle tget@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/jeffjose/.npm/tget/1.0.0/package.tgz',
+12 verbose tar pack   '/home/jeffjose/scripts/tget' ]
+13 verbose tarball /home/jeffjose/.npm/tget/1.0.0/package.tgz
+14 verbose folder /home/jeffjose/scripts/tget
+15 verbose addLocalTarball adding from inside cache /home/jeffjose/.npm/tget/1.0.0/package.tgz
+16 verbose correctMkdir /home/jeffjose/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd tget@1.0.0
+18 verbose afterAdd /home/jeffjose/.npm/tget/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /home/jeffjose/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/jeffjose/.npm/tget/1.0.0/package/package.json written
+21 silly publish { name: 'tget',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'tget is wget for torrents',
+21 silly publish   main: 'app.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository: { type: 'git', url: 'git+https://github.com/jeffjose/tget.git' },
+21 silly publish   author: { name: 'Jeffrey Jose', email: 'jeffjosejeff@gmail.com' },
+21 silly publish   homepage: 'https://github.com/jeffjose/tget#readme',
+21 silly publish   license: 'ISC',
+21 silly publish   dependencies:
+21 silly publish    { optimist: '^0.6.1',
+21 silly publish      rc: '^0.4.0',
+21 silly publish      clivas: '^0.2.0',
+21 silly publish      numeral: '^1.5.3',
+21 silly publish      progress: '^1.1.8',
+21 silly publish      colors: '^1.1.2' },
+21 silly publish   readme: '# peerflix\n\ntget is wget for torrents.\n\n```\nnpm install -g tget\n```\n\n## Usage\n\ntget works with a magnet link.\n\n```\ntget "magnet:?xt=urn:btih:ef330b39f4801d25b4245212e75a38634bfc856e"\n```\n\nRemember to put `"` around your magnet link since they usually contain `&`.\n`tget` will print a terminal interface.\n\n## Credits usage\n\ntget is built using the excellent [torrent-stream](https://github.com/mafintosh/torrent-stream) and draws heavy inspiration from [peerflix](https://github.com/mafintosh/peerflix)\n\n## License\n\nMIT\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '5594feff188350481f605acb0663cb61a920db1a',
+21 silly publish   bugs: { url: 'https://github.com/jeffjose/tget/issues' },
+21 silly publish   _id: 'tget@1.0.0',
+21 silly publish   _shasum: '2c3f640c14d6d02c73c1157a8aa0ab70c088a639',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name tget
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry uri https://registry.npmjs.org/tget
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading /home/jeffjose/.npm/tget/1.0.0/package.tgz
+29 verbose request uri https://registry.npmjs.org/tget
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 6:25:37 PM
+32 verbose request using bearer token for auth
+33 verbose request id f1e0b7ac664c183b
+34 http request PUT https://registry.npmjs.org/tget
+35 http 403 https://registry.npmjs.org/tget
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '98',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Sun, 16 Oct 2016 22:25:38 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-jfk8129-JFK',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1476656738.057320,VS0,VE295',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating /home/jeffjose/.npm/registry.npmjs.org/tget on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: you do not have permission to publish "tget". Are you logged in as the correct user? : tget
+39 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+39 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+39 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+39 verbose stack     at emitOne (events.js:82:20)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+40 verbose statusCode 403
+41 verbose pkgid tget
+42 verbose cwd /home/jeffjose/scripts/tget
+43 error Linux 4.8.0-22-generic
+44 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+45 error node v5.4.1
+46 error npm  v3.8.2
+47 error code E403
+48 error you do not have permission to publish "tget". Are you logged in as the correct user? : tget
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
