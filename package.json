@@ -1,6 +1,6 @@
 {
   "name": "t-get",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "tget is wget for torrents",
   "main": "app.js",
   "scripts": {
