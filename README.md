@@ -8,7 +8,7 @@ npm install -g t-get
 
 ## Usage
 
-tget works with a magnet link.
+tget works with a magnet link or a torrent file.
 
 ```
 tget 'magnet:?xt=urn:btih:0403fb4728bd788fbcb67e87d6feb241ef38c75a'
