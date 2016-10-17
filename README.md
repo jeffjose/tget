@@ -19,7 +19,7 @@ Remember to put `"` around your magnet link since they usually contain `&`.
 
 ![tget](https://raw.github.com/jeffjose/tget/master/tget.png)
 
-## Credits usage
+## Credits
 
 tget is built using the excellent [torrent-stream](https://github.com/mafintosh/torrent-stream) and draws heavy inspiration from [peerflix](https://github.com/mafintosh/peerflix)
 
