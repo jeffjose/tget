@@ -13,6 +13,13 @@ var argv = rc('tget', {}, optimist
   .usage('Usage: $0 magnet-link-or-torrent')
   .argv)
 
+var magnet = argv._[0]
+
+if (!magnet) {
+  optimist.showHelp()
+  process.exit(1)
+}
+
 var totalLength = null;
 var downLength = null;
 var bar = null;
@@ -23,7 +30,7 @@ var bytes = function(num) {
   return numeral(num).format('0.0b');
 }
 
-var engine = torrentStream(argv._[0], {
+var engine = torrentStream(magnet, {
     'connections': 100,
     'path': '.'
 });
