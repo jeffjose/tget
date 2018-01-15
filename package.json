@@ -19,11 +19,11 @@
   "dependencies": {
     "clivas": "^0.2.0",
     "colors": "^1.1.2",
-    "numeral": "^2.0.1",
+    "numeral": "^2.0.6",
     "optimist": "^0.6.1",
-    "parse-torrent": "^5.4.0",
-    "progress": "^1.1.8",
-    "rc": "^1.1.6",
-    "torrent-stream": "^1.0.1"
+    "parse-torrent": "^5.8.3",
+    "progress": "^2.0.0",
+    "rc": "^1.2.3",
+    "torrent-stream": "^1.0.3"
   }
 }
