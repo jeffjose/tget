@@ -3,6 +3,9 @@
 tget is wget for torrents.
 
 ```
+yarn global add t-get
+
+# if you use npm 
 npm install -g t-get
 ```
 
