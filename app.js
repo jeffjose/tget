@@ -12,12 +12,12 @@ var torrentStream = require("torrent-stream");
 var argv = rc(
   "tget",
   {},
-  optimist.usage("Usage: $0 magnet-link-or-torrent").argv
+  optimist.usage("Usage: $0 magnet-link-or-torrent [,...]").argv
 );
 
-var input = argv._[0];
+var input = argv._;
 
-if (!input) {
+if (input.length == 0) {
   optimist.showHelp();
   process.exit(1);
 }
@@ -97,14 +97,16 @@ var setupEngine = function(torrent) {
   });
 };
 
-parsetorrent.remote(input, function(err, parsedtorrent) {
-  if (err) {
-    console.error(err.message);
-    process.exit(1);
-  }
+for (let arg of input) {
+  parsetorrent.remote(arg, function(err, parsedtorrent) {
+    if (err) {
+      console.error(err.message);
+      process.exit(1);
+    }
 
-  setupEngine(parsedtorrent);
-});
+    setupEngine(parsedtorrent);
+  });
+};
 
 var draw = function() {
   _speed = bytes(engine.swarm.downloadSpeed()) + "/s";
