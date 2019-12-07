@@ -16,6 +16,9 @@
   "author": "Jeffrey Jose <jeffjosejeff@gmail.com>",
   "homepage": "https://github.com/jeffjose/tget#readme",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "clivas": "^0.2.0",
     "colors": "^1.1.2",
