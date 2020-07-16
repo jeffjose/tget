@@ -7,6 +7,9 @@ yarn global add t-get
 
 # if you use npm
 npm install -g t-get
+
+# on Arch based distros you can install from the aur
+yay -S nodejs-tget
 ```
 
 ## Usage
