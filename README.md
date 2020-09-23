@@ -1,6 +1,12 @@
+<p>
+  <a href="https://www.npmjs.com/package/t-get">
+    <img alt="tget is wget for torrents" src="https://raw.github.com/jeffjose/tget/master/banner.png">
+  </a>
+</p>
+
 # tget
 
-tget is wget for torrents.
+[tget](https://www.npmjs.com/package/t-get) is wget for torrents.
 
 ```
 yarn global add t-get
@@ -20,7 +26,7 @@ tget works with a magnet link or a torrent file.
 tget 'magnet:?xt=urn:btih:0403fb4728bd788fbcb67e87d6feb241ef38c75a'
 ```
 
-![tget](https://raw.github.com/jeffjose/tget/master/tget.png)
+![tget](https://raw.github.com/jeffjose/tget/master/screenshot.png)
 
 ## Credits
 
